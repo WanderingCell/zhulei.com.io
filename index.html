@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./test.css">
+   
+</head>
+<body>
+    <div class="login-box" id="box" >
+       <p>登录</p>
+       <div class="input-text">
+        <span class="font">用户</span>
+        <input type="text" placeholder="请输入账号" id="zhanghao">
+       </div>
+       <div class="input-text">
+        <span class='font'>密码</span>
+        <input type="password" placeholder="请输入密码" id="mima">
+       </div>
+       <input type="submit" tabindex="6" value="登录" class="btn"onclick="cli()">
+       
+       <div>
+        还没账号？<a href="#">立即注册</a>   <a href="#">忘记密码</a>
+       </div>
+      
+
+
+    </div>
+    <script>
+        function cli()
+        {
+            var m=0;
+            var box=document.getElementById("box")
+            var a=document.getElementById("zhanghao");
+            var b=document.getElementById("mima");
+          if(a.value==12345||b.value==12345)
+          {
+             window.location.href="https://acggw.xyz/"
+          }
+          else if(m==0){
+            var p=document.createElement("p");
+            p.innerText="你的账号或密码输入有误!!!"
+          p.style.color="red"
+          p.style.fontSize="12px";
+            box.appendChild(p);
+            m=1;
+          }
+
+            b.value=null;
+            a.value=null;
+
+        }
+    </script>
+</body>
+</html>
